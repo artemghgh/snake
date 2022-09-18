@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet">
+  <title>Snake game</title>
+</head>
+<body>
+  <form action="" class="settings">
+    <h2 class="settings__title">
+      Set your settings
+    </h2>
+    <label for="setSpeed">SPEED</label><br>
+    <input type="range" min="0.1" max="1" step="0.1" value="0.5" class="settings__speed" id="setSpeed" name="setSpeed" oninput="speed.value=setSpeed.value">
+    <output name="speed" id="speed" for="setSpeed">0.5</output>
+    <span>squares per seconds</span><br>
+    
+    <label for="fieldSize">FIELD SIZE</label><br>
+    <input type="range" min="10" max="40" step="1" value="20" class="settings__field-size" id="fieldSize" name="fieldSize" oninput="setSize.value=fieldSize.value">
+    <output name="setSize" id="setSize" for="fieldSize">20</output>
+    <span>squares</span><br>
+    
+    <input class="settings__submit" type="button" value="Start game!"></input>
+  </form>
+  <div class="container">
+    <div class="score__box">
+      <span class="score__title">Score:</span>
+      <span class="score__count">0</span>
+    </div>
+    <div class="grid-field">
+
+  </div>
+  <div class="game-over">
+    <h2 class="game-over__title">
+      Game over
+    </h2>
+    <div class="game-over__score">
+      Your score 0000
+    </div>
+    <input class="game-over__restart" type="button" value="Start new game!"></input>
+
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
